@@ -1,0 +1,316 @@
+* {
+    box-sizing: border-box;
+    --black: #0E1412;
+    --bg-color: #F8EBC9;
+    --white: #ffffff;
+    --orange: #FD6038;
+    --yellow: #FED464;
+    --green: #017848;
+    --grey: #586863;
+
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.sub-heading {
+    font-family: "Roboto Slab", serif;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 6rem;
+    line-height: 1.17;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 4.2rem;
+    line-height: 1.24;
+}
+
+h3 {
+    font-size: 2.4rem;
+    line-height: 1.42;
+}
+
+h4 {
+    font-size: 2.2rem;
+    line-height: 1.45;
+}
+
+h5 {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.sub-heading {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.p1,
+.p1-md {
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.p1-md {
+    font-weight: 500;
+}
+
+.p2 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.p3 {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.71;
+}
+
+.btn-1 {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+    text-decoration: none;
+}
+
+.btn-2 {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75;
+    text-decoration: none;
+}
+
+input,
+button,
+label,
+textarea,
+select {
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0;
+    outline: none;
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1170px;
+}
+
+.header-wrapper {
+    width: 100%;
+    height: 859px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--bg-color);
+    padding-bottom: 50px;
+}
+
+.header .navigation {
+    padding-top: 30px;
+    align-items: center;
+}
+
+.header .navigation .menu-active {
+    display: none;
+}
+
+.header .logo a {
+    display: inline-block;
+    width: 84px;
+    height: 67px;
+    color: var(--cl-black);
+}
+
+.header .logo img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.header .call {
+    height: 32px;
+    line-height: 28px;
+    text-align: right;
+    color: var(--cl-black);
+}
+
+.header .call strong {
+    font-size: 2.2rem;
+    line-height: 32px;
+}
+
+.header .call a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header .menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header .menu a {
+    text-decoration: none;
+    color: var(--black)
+}
+
+.header .menu a.active-link {
+    color: var(--orange)
+}
+
+.header .navigation .menu-overlay {
+    position: fixed;
+    z-index: 98;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #3a3a3a9a;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+#menu:checked~.menu-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header .navigation .menu-close{
+    display: none;
+}
+
+.header .banner {
+    margin-top: 142px;
+}
+
+.header .banner .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.header .banner-link {
+    display: block;
+    width: 70%;
+    height: 100%;
+    aspect-ratio: 165/238;
+}
+
+.header .banner-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header .banner .btn-banner {
+    align-self: flex-start;
+    color: var(--white);
+    background-color: var(--orange);
+    margin-top: 24px;
+    padding: 15px 35px;
+}
+
+.header .banner .img-wrapper {
+    position: relative;
+    display: flex;
+    background-color: var(--green);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.header .banner .img-wrapper .yellow {
+    width: 15%;
+    height: 88.65%;
+    align-self: flex-end;
+    background-color: var(--yellow);
+}
+
+.header .banner .img-wrapper::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: -50% -50%;
+    content: "";
+    width: 40%;
+    aspect-ratio: 1/1;
+    background-image: url(../img/Play.svg);
+    background-size: cover;
+}
+
+.header .banner .img-wrapper::before {
+    content: "";
+    width: 35%;
+    aspect-ratio: 41/32;
+    position: absolute;
+    top: 50%;
+    right: -18%;
+    translate: 0 -100%;
+    background-image: url(../img/Mask\ group.svg);
+    background-size: cover;
+
+}
+
+.header .banner .col-left {
+    position: relative;
+    margin-right: -12px;
+    padding-right: 0;
+    background-color: var(--yellow);
+}
+
+.header .banner .col-left::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: -50% -50%;
+    content: "";
+    width: 184px;
+    aspect-ratio: 1/1;
+    background-image: url(../img/Play.svg);
+}
+
+.header .banner .col-right {
+    position: relative;
+    margin-left: -12px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: var(--green);
+}
+
+.header .banner .col-right::before {
+    content: "";
+    width: 164px;
+    aspect-ratio: 41/32;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    translate: 0 -100%;
+    background-image: url(../img/Mask\ group.svg);
+}

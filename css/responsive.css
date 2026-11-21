@@ -1,0 +1,113 @@
+/* xl */
+@media(max-width: 1399.98px) {
+    .header .banner .img-wrapper::before {
+        display: none;
+    }
+}
+/* lg */
+@media(max-width: 1199.98px) {
+    
+    .header .header-wrapper{
+        height: auto;
+    }
+    .header .banner .img-wrapper{
+        margin-top: 128px;
+    }
+    .header .banner {
+        margin-top: 64px;
+    }
+}
+/* md */
+@media(max-width: 991.98px) {
+    .header .navigation .menu-active {
+        display: block;
+        color: var(--black);
+        font-size: 2.4rem;
+    }
+
+    .header .menu-wrapper {
+        min-width: 40%;
+        font-size: 1.8rem;
+        position: absolute;
+        top: 0;
+        left: -101%;
+        bottom: 0;
+        z-index: 99;
+        transition: left 0.4s ease;
+        background-color: var(--orange);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+    .header .banner .img-wrapper::before {
+        display: block;
+    }
+
+    .header .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 1.8rem;
+    }
+
+    .header .menu a {
+        display: inline-block;
+        padding: 16px 8px;
+    }
+
+    .header .menu a.active-link {
+        color: var(--white)
+    }
+
+    .header .menu-close {
+        position: absolute;
+        top: 10px;
+        right: 8px;
+        font-size: 2.2rem;
+    }
+
+    #menu:checked~.menu-wrapper {
+        display: block;
+        left: 0;
+    }
+
+    #menu:checked~.menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+    .header .navigation .menu-close{
+        display: block;
+    }
+    
+}
+/* sm */
+@media(max-width: 767.98px) {
+    .header .menu-wrapper{
+        min-width: 60%;
+    }
+    h1{
+        font-size: 3.9rem;
+    }
+}
+/* xs */
+@media(max-width: 575.98px) {
+    .container{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .header .banner .text-wrapper{
+        width: 100%;
+    }
+    
+    .header .banner .text-wrapper .p1{
+        max-width: 90%;
+    }
+    .header .banner .btn-banner{
+        min-width: 140px;
+        padding: 10px 30px;
+        margin-top: 12px;
+    }
+    .header .banner .img-wrapper{
+        margin-top: 68px;
+    }
+
+}
